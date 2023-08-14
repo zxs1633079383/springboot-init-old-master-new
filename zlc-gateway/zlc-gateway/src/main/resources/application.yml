@@ -1,0 +1,62 @@
+server:
+  port: 8090
+
+dubbo:
+  application:
+    name: dubbo-springboot-gateway-consumer
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: nacos://localhost:8848
+
+spring:
+  cloud:
+    gateway:
+      default-filters:
+        - AddResponseHeader=source,zlc
+      routes:
+        - id: api_route
+          uri: http://localhost:8123
+          predicates:
+            - Path=/api/**
+#          ??
+#          filters:
+#            - AddRequestHeader=yupi, zlc
+#            - AddRequestParameter=name,blue
+#            - name: CircuitBreaker
+#              args:
+#                name: CircuitBreaker
+#                fallbackUri: forward:/fallback
+#
+#        - id: add_request_header_route
+#          uri: http://baidu.com
+#          predicates:
+#            - Path=/fallback
+
+
+
+
+
+
+
+#        - id: after_route
+#          uri: https://yupi.icu
+#          predicates:
+#            - After=2022-08-20T17:42:47.789-07:00[America/Denver]
+
+#        - id: yupi_path_route
+#          uri: https://yupi.icu
+#          predicates:
+#            - Path=/api/**
+#        - id: baidu_path_route
+#          uri: https://www.baidu.com
+#          predicates:
+#            - Path=/baidu/**
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          gateway: trace

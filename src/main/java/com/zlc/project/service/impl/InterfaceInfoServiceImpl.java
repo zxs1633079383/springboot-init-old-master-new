@@ -9,7 +9,7 @@ import com.zlc.project.exception.BusinessException;
 import com.zlc.project.mapper.InterfaceInfoMapper;
 import com.zlc.model.entity.InterfaceInfo;
 
-import com.zlc.project.service.InterfaceInfoService;
+import com.zlc.service.InterfaceInfoService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
@@ -52,6 +52,7 @@ public class InterfaceInfoServiceImpl extends ServiceImpl<InterfaceInfoMapper, I
         }
 
     }
+
 }
 
 

@@ -2,6 +2,7 @@ server:
   port: 8123
   servlet:
     context-path: /api
+    # todo 应该动态生成,或者说用户登录后, 修改该内容, 为登录用户的ak和sk
 yuapi:
   client:
     accesskey: yupi

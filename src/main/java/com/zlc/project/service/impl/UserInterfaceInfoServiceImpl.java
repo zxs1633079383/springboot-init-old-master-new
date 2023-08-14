@@ -36,15 +36,26 @@ public class UserInterfaceInfoServiceImpl extends ServiceImpl<UserInterfaceInfoM
     }
 
     @Override
-    public User getInvokeUser(String accessKey, String secreKey) {
+    public InterfaceInfo getInterfaceInfo(String path, String method) {
         return null;
     }
 
     @Override
-    public InterfaceInfo getInterInfo(String path, String method) {
+    public User getInvokeUser(String accessKey, String secreKey) {
         return null;
     }
 
+//    @Override
+//    public User getInvokeUser(String accessKey, String secreKey) {
+//        return null;
+//    }
+//
+//    @Override
+//    public InterfaceInfo getInterInfo(String path, String method) {
+//        return null;
+//    }
+
+    @Override
     public boolean invokeCount(long interfaceInfoId, long userId){
         //校验
         if(interfaceInfoId <= 0 || userId<=0) {

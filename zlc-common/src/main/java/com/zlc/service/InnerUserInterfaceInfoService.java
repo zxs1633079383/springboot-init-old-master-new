@@ -11,16 +11,8 @@ import com.zlc.model.entity.UserInterfaceInfo;
 * @createDate 2023-08-12 15:11:09 即将进行dubbo调用
 */
 
-public interface UserInterfaceInfoService extends IService<UserInterfaceInfo> {
+public interface InnerUserInterfaceInfoService  {
 
-    public void validUserInterfaceInfo(UserInterfaceInfo interfaceInfo, boolean add);
-
-    //2. 数据查询该接口是否存在
-    InterfaceInfo getInterfaceInfo(String path,String method);
-
-
-    //1 . 数据口是否已分配密钥
-    User getInvokeUser(String accessKey,String secreKey);
 
 
     boolean invokeCount (long interfaceInfoId, long userId);

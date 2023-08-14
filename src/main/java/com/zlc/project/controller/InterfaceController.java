@@ -16,7 +16,7 @@ import com.zlc.model.dto.interfaceinfo.InterfaceInvokeRequest;
 import com.zlc.model.entity.InterfaceInfo;
 import com.zlc.model.entity.User;
 import com.zlc.model.enums.InterfaceStatusEnum;
-import com.zlc.project.service.InterfaceInfoService;
+import com.zlc.service.InterfaceInfoService;
 import com.zlc.project.service.UserService;
 import com.zlc.zlcclient.client.ZlcClient;
 import lombok.extern.slf4j.Slf4j;

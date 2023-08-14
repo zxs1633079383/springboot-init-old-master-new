@@ -8,6 +8,7 @@ import com.zlc.project.common.ErrorCode;
 import com.zlc.project.exception.BusinessException;
 import com.zlc.project.mapper.UserMapper;
 import com.zlc.model.entity.User;
+//import com.zlc.service.UserService;
 import com.zlc.project.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -111,6 +112,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         request.getSession().setAttribute(USER_LOGIN_STATE, user);
         return user;
     }
+
+//    @Override
+//    public User getInvokeUser(String accessKey, String secreKey) {
+//        return null;
+//    }
 
     /**
      * 获取当前登录用户
